@@ -32,6 +32,17 @@ def productExceptSelf(nums):
             r = r * nums[i]
         return out_array
 
+def product_Except_Selfone(nums):
+    out = [1]*len(nums)
+    m1, m2 = 1, 1
+    for i in range(len(nums)):
+        j = -1 - i
+        out[i] *= m1
+        out[j] *= m2
+        m1 *= nums[i]
+        m2 *= nums[j]
+    return out
+
 ls1 = [1, 2, 3, 4, 5]
 #print(product_except_self(ls1))
 ls2 = [0, 1]
@@ -40,3 +51,4 @@ ls3 = [0, 1, 0]
 #print(product_except_self(ls3))
 print(productExceptSelf(ls1))
 print(productExceptSelf(ls2))
+print(product_Except_Selfone(ls1))
