@@ -13,7 +13,7 @@ def maxProfit(prices):
     max_price = float('-inf')
 
     # Backward phase
-    for j in reversed(range(len(prices))):
+    for j in range(len(prices)-1,0,-1):
         max_price = max(max_price, prices[j])
         profit = max_price - prices[j]
         max_total_profit = max(max_total_profit, first_profits[j-1] + profit)
