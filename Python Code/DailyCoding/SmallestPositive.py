@@ -15,3 +15,5 @@ def smallest(nums):
 
 nums = [1, 2, 3, 10]
 print(smallest(nums))
+nums = [1, 2, 3, 4, 13]
+print(smallest(nums))
