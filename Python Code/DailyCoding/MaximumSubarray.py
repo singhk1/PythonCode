@@ -21,3 +21,5 @@ def max_subarray(nums):
 
 nums = [-2,1,-3,4,-1,2,1,-5,4]
 print(max_subarray(nums))
+nums = [0,1,0]
+print(max_subarray(nums))

@@ -20,12 +20,35 @@ def jump(nums):
     steps = nums[0]
     for i in range(1, len(nums) - 1):
         max_range = max(max_range, i + nums[i])
+        print(str(max_range) + " printing ")
         steps -= 1
 
         if steps == 0:
             jumps += 1
             steps = max_range - i
+        print(str(steps) + " steps ")
+        print(str(jumps) + " jumps")
     return jumps + 1
 
-nums = [2,3,1,1,4]
+def jump2(nums):
+    step = max_far = curr_far = 0
+    for i in range(len(nums)):
+        if i > curr_far:
+            curr_far = max_far
+            step += 1
+        max_far = max(max_far, i + nums[i])
+        #print(i)
+    return step
+
+
+'''nums = [2,3,1,1,4]
 print(jump(nums))
+nums = [6, 2, 4, 0, 5, 1, 1, 4, 2, 9]
+print(jump(nums))'''
+
+nums = [2,3,1,1,4]
+print(jump2(nums))
+nums = [6, 2, 4, 0, 5, 1, 1, 4, 2, 9]
+print(jump2(nums))
+nums = [1,1,1,1]
+print(jump2(nums))

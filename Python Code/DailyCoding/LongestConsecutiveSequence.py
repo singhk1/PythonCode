@@ -15,3 +15,5 @@ def longest_sequence(nums):
 
 nums = [100, 4, 200, 1, 3, 2]
 print(longest_sequence(nums))
+nums = [0, 1]
+print(longest_sequence(nums))
