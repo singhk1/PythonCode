@@ -1,4 +1,3 @@
-
 def value(letter, power):
     return (26 ** power) * (ord(letter) - 96)
 
